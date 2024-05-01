@@ -1,4 +1,4 @@
-import 'package:chate_ease/pages/loadind_page.dart';
+import 'package:chate_ease/pages/auth_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.blue,
       ),
-      home: const LoadindPage(),
+      home: const AuthPage(),
     );
   }
 }

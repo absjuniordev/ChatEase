@@ -1,5 +1,5 @@
 import 'package:chate_ease/components/auth_form.dart';
-import 'package:chate_ease/models/auth_form_data.dart';
+import 'package:chate_ease/core/models/auth_form_data.dart';
 import 'package:flutter/material.dart';
 
 class AuthPage extends StatefulWidget {

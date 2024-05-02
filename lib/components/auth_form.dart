@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:chate_ease/components/user_image_picker.dart';
 import 'package:flutter/material.dart';
 
-import 'package:chate_ease/models/auth_form_data.dart';
+import 'package:chate_ease/core/models/auth_form_data.dart';
 
 class AuthForm extends StatefulWidget {
   final Function onSubimit;

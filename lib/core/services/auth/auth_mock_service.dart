@@ -7,12 +7,19 @@ import 'package:chate_ease/core/models/chat_user.dart';
 import 'auth_service.dart';
 
 class AuthMockService implements AuthService {
-  static final Map<String, ChatUser> _users = {};
+  static final _userDefult = ChatUser(
+      id: "1",
+      name: "Teste",
+      email: "teste@hotmail.com",
+      imageUrl: "assets/image/avatar.png");
+  static final Map<String, ChatUser> _users = {
+    _userDefult.email: _userDefult,
+  };
   static ChatUser? _currentUser;
   static MultiStreamController<ChatUser?>? _controller;
   static final _userStream = Stream<ChatUser?>.multi((controller) {
     _controller = controller;
-    _updateUser(null);
+    _updateUser(_userDefult);
   });
 
   @override

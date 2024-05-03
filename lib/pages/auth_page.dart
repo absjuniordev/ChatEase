@@ -3,6 +3,8 @@ import 'package:chate_ease/core/models/auth_form_data.dart';
 import 'package:chate_ease/core/services/auth/auth_mock_service.dart';
 import 'package:flutter/material.dart';
 
+import '../core/services/auth/auth_service.dart';
+
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});
 
@@ -18,10 +20,10 @@ class _AuthPageState extends State<AuthPage> {
       setState(() => _isLoading = true);
       if (formData.isLogin) {
         // login
-        await AuthMockService().login(formData.name, formData.email);
+        await AuthService().login(formData.name, formData.email);
       } else {
         //Signup
-        AuthMockService().sigunp(formData.name, formData.email, formData.image);
+        AuthService().sigunp(formData.name, formData.email, formData.image);
       }
     } catch (e) {
       //tratar error

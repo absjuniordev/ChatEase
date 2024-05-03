@@ -7,6 +7,7 @@ import 'package:chate_ease/core/models/chat_user.dart';
 import 'auth_service.dart';
 
 class AuthMockService implements AuthService {
+  //Usuario padrão
   static final _userDefult = ChatUser(
       id: "1",
       name: "Teste",

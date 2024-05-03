@@ -1,5 +1,6 @@
 import 'package:chate_ease/components/auth_form.dart';
 import 'package:chate_ease/core/models/auth_form_data.dart';
+import 'package:chate_ease/core/services/auth/auth_mock_service.dart';
 import 'package:flutter/material.dart';
 
 class AuthPage extends StatefulWidget {
@@ -17,8 +18,10 @@ class _AuthPageState extends State<AuthPage> {
       setState(() => _isLoading = true);
       if (formData.isLogin) {
         // login
+        await AuthMockService().login(formData.name, formData.email);
       } else {
         //Signup
+        AuthMockService().sigunp(formData.name, formData.email, formData.image);
       }
     } catch (e) {
       //tratar error

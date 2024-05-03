@@ -57,8 +57,8 @@ class _AuthFormState extends State<AuthForm> {
                 UserImagePicker(onImagePicker: _handleImagePicker),
               if (!_formData.isLogin)
                 TextFormField(
-                  initialValue: _formData.nome,
-                  onChanged: (name) => _formData.nome = name,
+                  initialValue: _formData.name,
+                  onChanged: (name) => _formData.name = name,
                   key: const ValueKey('name'),
                   decoration: const InputDecoration(labelText: "Nome"),
                   validator: (_name) {

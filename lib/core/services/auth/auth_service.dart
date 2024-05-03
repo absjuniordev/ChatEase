@@ -7,7 +7,7 @@ abstract class AuthService {
 
   Stream<ChatUser?> get userChanger;
 
-  Future<void> sigunp(String name, String email, File image);
+  Future<void> sigunp(String name, String email, File? image);
   Future<void> login(String name, String email);
   Future<void> logout();
 }

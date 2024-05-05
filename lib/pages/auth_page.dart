@@ -1,6 +1,5 @@
 import 'package:chate_ease/components/auth_form.dart';
 import 'package:chate_ease/core/models/auth_form_data.dart';
-import 'package:chate_ease/core/services/auth/auth_mock_service.dart';
 import 'package:flutter/material.dart';
 
 import '../core/services/auth/auth_service.dart';

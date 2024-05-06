@@ -15,9 +15,14 @@ class MyApp extends StatelessWidget {
       title: 'Chate Ease',
       theme: ThemeData(
         primaryColor: Colors.blue,
-        appBarTheme: AppBarTheme(
-          color: Theme.of(context).primaryColor,
+        appBarTheme: const AppBarTheme(
+          color: Colors.blue,
           centerTitle: true,
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
       home: const AuthOrAppPage(),

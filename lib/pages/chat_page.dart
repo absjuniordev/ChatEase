@@ -1,13 +1,8 @@
-import 'dart:math';
-
 import 'package:chate_ease/components/new_message.dart';
-import 'package:chate_ease/core/models/chat_notification.dart';
 import 'package:chate_ease/core/services/auth/auth_service.dart';
 import 'package:chate_ease/core/services/notification/chat_notification_service.dart';
 import 'package:chate_ease/pages/notification_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 import '../components/messages.dart';

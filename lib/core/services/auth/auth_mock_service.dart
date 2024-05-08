@@ -10,8 +10,8 @@ class AuthMockService implements AuthService {
   //Usuario padrão
   static final _userDefult = ChatUser(
       id: "1",
-      name: "Teste",
-      email: "teste@hotmail.com",
+      name: "Fagner",
+      email: "fau@hotmail.com",
       imageUrl: "assets/image/avatar.png");
   static final Map<String, ChatUser> _users = {
     _userDefult.email: _userDefult,

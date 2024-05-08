@@ -26,7 +26,7 @@ class Messages extends StatelessWidget {
                 return MessageBubble(
                   key: ValueKey(msg[i].id),
                   message: msg[i],
-                  belongsToCurretuser: userCurrent?.id == msg[i].id,
+                  belongsToCurretuser: userCurrent?.id == msg[i].uerId,
                 );
               },
             );

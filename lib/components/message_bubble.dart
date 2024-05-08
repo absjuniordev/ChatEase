@@ -65,6 +65,9 @@ class MessageBubble extends StatelessWidget {
                 vertical: 15,
               ),
               child: Column(
+                crossAxisAlignment: belongsToCurretuser
+                    ? CrossAxisAlignment.end
+                    : CrossAxisAlignment.start,
                 children: [
                   Text(
                     message.username,
@@ -75,6 +78,8 @@ class MessageBubble extends StatelessWidget {
                   ),
                   Text(
                     message.text,
+                    textAlign:
+                        belongsToCurretuser ? TextAlign.right : TextAlign.left,
                     style: TextStyle(
                       color: belongsToCurretuser ? Colors.black : Colors.white,
                     ),

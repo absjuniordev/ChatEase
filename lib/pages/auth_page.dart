@@ -22,7 +22,12 @@ class _AuthPageState extends State<AuthPage> {
         await AuthService().login(formData.name, formData.email);
       } else {
         //Signup
-        AuthService().sigunp(formData.name, formData.email, formData.image);
+        AuthService().sigunp(
+          formData.name,
+          formData.email,
+          formData.password,
+          formData.image,
+        );
       }
     } catch (e) {
       //tratar error

@@ -37,7 +37,8 @@ class AuthMockService implements AuthService {
   Future<void> logout() async => _updateUser(null);
 
   @override
-  Future<void> sigunp(String name, String email, File? image) async {
+  Future<void> sigunp(
+      String name, String email, String password, File? image) async {
     final newUser = ChatUser(
       id: Random().nextDouble().toString(),
       name: name,

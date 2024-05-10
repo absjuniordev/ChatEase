@@ -6,12 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:chate_ease/core/models/auth_form_data.dart';
 
 class AuthForm extends StatefulWidget {
-  final Function onSubimit;
+  final void Function(AuthFormData) onSubmit;
+
   const AuthForm({
     super.key,
-    required this.onSubimit,
+    required this.onSubmit,
   });
-
   @override
   State<AuthForm> createState() => _AuthFormState();
 }
@@ -40,7 +40,7 @@ class _AuthFormState extends State<AuthForm> {
     if (_formData.image == null && _formData.isSignup) {
       return _showError("Imagem não selecionada");
     }
-    widget.onSubimit(_formData);
+    widget.onSubmit(_formData);
   }
 
   @override

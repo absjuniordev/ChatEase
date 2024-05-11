@@ -15,13 +15,15 @@ class ChatFirebaseService implements ChatService {
     final store = FirebaseFirestore.instance;
 
     // ChatMessage => Mpa<String, dynamic>
-    final docRef = await store.collection("chat").add({
-      'text': text,
-      'createdAt': DateTime.now().toIso8601String(),
-      'uerId': user.id,
-      'username': user.name,
-      'userImageUrl': user.imageUrl,
-    });
+    final docRef = await store.collection("chat").add(
+      {
+        'text': text,
+        'createdAt': DateTime.now().toIso8601String(),
+        'uerId': user.id,
+        'username': user.name,
+        'userImageUrl': user.imageUrl,
+      },
+    );
     final doc = await docRef.get();
 
     //  Mpa<String, dynamic> =>ChatMessage
@@ -34,6 +36,30 @@ class ChatFirebaseService implements ChatService {
       uerId: data['uerId'],
       username: data['username'],
       userImageUrl: data['userImageUrl'],
+    );
+  }
+
+  Map<String, dynamic> _toFirestore(ChatMessage msg, SetOptions? options) {
+    return {
+      'text': msg.text,
+      'createdAt': msg.createdAt.toIso8601String(),
+      'uerId': msg.uerId,
+      'username': msg.username,
+      'userImageUrl': msg.userImageUrl,
+    };
+  }
+
+  ChatMessage _fromFirestore(
+    DocumentSnapshot<Map<String, dynamic>> doc,
+    SnapshotOptions? options,
+  ) {
+    return ChatMessage(
+      id: doc.id,
+      text: doc['text'],
+      createdAt: DateTime.parse(doc['createdAt']),
+      uerId: doc['uerId'],
+      username: doc['username'],
+      userImageUrl: doc['userImageUrl'],
     );
   }
 }

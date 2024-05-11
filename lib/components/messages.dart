@@ -14,7 +14,7 @@ class Messages extends StatelessWidget {
         stream: ChatService().messageStream(),
         builder: (ctx, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const CircularProgressIndicator.adaptive();
+            return const Center(child: CircularProgressIndicator.adaptive());
           } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
             return const Center(child: Text("Sem dados. Vamos conversar?"));
           } else {

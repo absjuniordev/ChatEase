@@ -26,9 +26,9 @@ class ChathNotificationService with ChangeNotifier {
 
   // Push Notifcatio
   Future<void> init() async {
+    await _configureTermined();
     await _configureForeground();
     await _configureBackground();
-    await _configureTermined();
   }
 
   Future<bool> get _isAuthorized async {

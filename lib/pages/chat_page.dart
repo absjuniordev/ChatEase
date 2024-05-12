@@ -14,7 +14,7 @@ class ChatPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Juniores"),
+        title: const Text("ChatEasy"),
         actions: [
           DropdownButtonHideUnderline(
             child: DropdownButton(
